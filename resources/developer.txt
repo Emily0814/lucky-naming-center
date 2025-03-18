@@ -1,0 +1,12 @@
+[Project]
+프로젝트명 : naming-center
+개발기간 : 2025년 03월 16일 ~ 2025년 03월 18일(3일)
+개발코드 : https://github.com/Emily0814/ajaaja-portfolio
+[About]
+개발자명 : 이혜미
+이메일 :  ajaajashwaiting@gmail.com
+포트폴리오 :  https://ajaaja-portfolio.netlify.app
+자기소개 : 저는 끊임없는 자기계발을 통해 발전하는 것을 중요하게 생각하는 개발자입니다.
+책임감 있는 업무 수행을 통해 팀과 프로젝트에 신뢰를 쌓아가며, 더 나은 결과물을 도출하고자 노력합니다.
+또한, 팀원들과의 협업을 통해 서로의 경험과 전문성을 존중하고 배우며, 함께 성장하는 개발자가 되기 위해
+최선을 다하고 있습니다.
