@@ -49,9 +49,13 @@ java -cp "bin:lib/*" com.java.naming.Main
 5. 추천 이름 중 선택 또는 다시 생성
 
 ## 📸 스크린샷
+1. 메인 메뉴
 ![image](https://github.com/user-attachments/assets/527dcc86-e1e3-447d-aaa4-9ca5937e154c)
+2. 작명 과정
 ![image](https://github.com/user-attachments/assets/4d2882b6-186a-4b23-97c0-a0abf80adb65)
+3. 이력보기
 ![image](https://github.com/user-attachments/assets/c905552a-57a0-4e44-970e-276fcd61b220)
+4. 다국어 지원
 ![image](https://github.com/user-attachments/assets/9c1f5228-819e-4017-be89-b6512dc034ce)
 
 
