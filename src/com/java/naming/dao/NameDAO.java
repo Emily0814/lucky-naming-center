@@ -11,10 +11,10 @@ import com.java.naming.model.RequestDTO;
 
 public class NameDAO {
     
-    private final String RESOURCE_PATH = "resource\\";
+    private final String RESOURCE_PATH = "resources\\";
     private final String MALE_PREFIX = "male_";
     private final String FEMALE_PREFIX = "female_";
-    private final String HISTORY_PATH = "resource\\history.txt";
+    private final String HISTORY_PATH = "resources\\history.txt";
     
     private Random random = new Random();
     

@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import com.java.naming.model.HistoryDTO;
+import com.java.naming.service.LanguageService;
 import com.java.naming.view.HistoryView;
 import com.java.naming.view.MainView;
 
@@ -55,6 +56,7 @@ public class HistoryDAO {
                     dto.setSurname(temp[4]);         //성
                     dto.setCharactercount(temp[5]);  //글자수
                     dto.setRecommendedname(temp[6]); //추천이름
+                    //temp[7]은 전체 이름(성+이름)
                     
                     lineArray.add(dto);
                 }
@@ -62,14 +64,26 @@ public class HistoryDAO {
 			
 			// 이력 목록 생성 > lineArray에 저장된 DTO 객체들을 순회하면서 포맷팅된 문자열을 tempHistory에 추가
 			for (HistoryDTO dto : lineArray) {
-				tempHistory += String.format("%-10s %-20s %-6s %-10s %-4s %-6s %s\n", 
+				//성별, 타입, 글자수 항목 번역
+			    String translatedGender = LanguageService.get(dto.getGender());
+			    String translatedType = LanguageService.get(dto.getType());
+			    String translatedCharCount = LanguageService.get(dto.getCharactercount());
+				
+				//각 필드에 고정 너비 적용 (번역된 문자열 사용)
+			    String typeStr = padKoreanString(translatedType, 15);         // 타입 (더 넓은 공간)
+			    String surnameStr = padKoreanString(dto.getSurname(), 5);     // 성
+			    String charCountStr = padKoreanString(translatedCharCount, 10); // 글자수
+			    String nameStr = padKoreanString(dto.getRecommendedname(), 10);     // 추천이름
+				
+				tempHistory += String.format("%-8s %-23s %-6s %-17s %-13s %-8s %-12s %s\n", 
                         dto.getNo(), 
                         dto.getDate(), 
-                        dto.getGender(), 
-                        dto.getType(), 
-                        dto.getSurname(), 
-                        dto.getCharactercount(), 
-                        dto.getRecommendedname());
+                        translatedGender,   // 번역된 성별
+                        typeStr,            // 패딩 적용된 번역 타입
+                        surnameStr,         // 패딩 적용된 성
+                        charCountStr,       // 패딩 적용된 번역 글자수
+                        nameStr,            // 패딩 적용된 추천이름
+                        dto.getSurname() + dto.getRecommendedname());  //성과 이름을 합쳐서 표시
 			}
 			
 			reader.close();
@@ -82,6 +96,28 @@ public class HistoryDAO {
 		return tempHistory;
 	}
 	
+	/**
+	 * 한글 문자열에 패딩을 적용하는 메소드
+	 * 한글은 영문보다 넓은 공간을 차지하므로 이를 고려하여 패딩
+	 */
+	private String padKoreanString(String str, int totalWidth) {
+	    int currentWidth = 0;
+	    for (char c : str.toCharArray()) {
+	        // 한글 또는 한자인 경우 2칸 너비로 계산
+	        if (c >= '가' && c <= '힣' || (c >= 0x4E00 && c <= 0x9FFF)) {
+	            currentWidth += 2;
+	        } else {
+	            currentWidth += 1;
+	        }
+	    }
+	    
+	    // 남은 공간을 공백으로 채움
+	    int padSize = totalWidth - currentWidth;
+	    if (padSize > 0) {
+	        return str + " ".repeat(padSize);
+	    }
+	    return str;
+	}
 	
 	
 }

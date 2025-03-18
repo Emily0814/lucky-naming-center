@@ -93,7 +93,7 @@ public class SettingService {
 		
 		view.getGithub();
 		
-		String url = "https://github.com/Emily0814/ajaaja-portfolio";
+		String url = "https://github.com/Emily0814/naming-center";
 		
 		try {
 			Desktop.getDesktop().browse(new URI(url));

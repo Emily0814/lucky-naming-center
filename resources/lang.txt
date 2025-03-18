@@ -1,3 +1,71 @@
-한국어, 한국어, 한국어
-English, English, English
-日本語, 日本語, 日本語
+한국어,Korean,韓国語
+영어,English,英語
+일본어,Japanese,日本語
+설명,Explanation,説明
+개발자 정보,Developer Information,開発者情報
+📜 환영합니다! 운수 좋은 작명소입니다.,📜 Welcome to Lucky Naming Center!,📜 ようこそ！ラッキーネーミングセンターへ！
+메뉴 선택,Menu Selection,メニュー選択
+작명하기,Create a Name,名前をつける
+이력보기,View History,履歴を見る
+설명보기,View Explanation,説明を見る
+환경설정,Settings,設定
+종료하기,Exit,終了
+입력,Input,入力
+⚧️ 성별을 선택해주세요.,⚧️ Please select the gender.,⚧️ 性別を選択してください。
+♀️ 여자,♀️ Female,♀️ 女性
+♂️ 남자,♂️ Male,♂️ 男性
+어떤 느낌의 이름을 원하시나요?,What type of name would you like?,どんな雰囲気の名前が欲しいですか？
+귀여운,Cute,かわいい
+강한,Strong,強い
+부드러운,Soft,柔らかい
+전통적인,Traditional,伝統的な
+2025년 핫한,2025 Trendy,2025年流行り
+성을 입력해주세요.,Please enter the surname.,姓を入力してください。
+원하는 이름의 글자수를 선택해주세요.,Please select the number of characters for the name.,希望する名前の文字数を選択してください。
+외자,Single Character,一文字
+2글자,Two Characters,二文字
+3글자,Three Characters,三文字
+추천 이름 목록,Recommended Name List,おすすめ名前リスト
+성별:,Gender:,性別：
+유형:,Type:,タイプ：
+성:,Surname:,姓：
+글자수:,Characters:,文字数：
+마음에 드는 이름을 선택해주세요.,Please select a name you like.,気に入った名前を選んでください。
+이름 다시 생성하기,Generate New Names,名前を再作成する
+메인으로 돌아가기,Return to Main Menu,メインメニューに戻る
+조건에 맞는 이름을 찾을 수 없습니다.,No names match your criteria.,条件に合う名前が見つかりません。
+다른 조건으로 다시 시도해주세요.,Please try again with different criteria.,別の条件でもう一度試してください。
+이름 생성 완료,Name Creation Complete,名前生成完了
+선택하신 이름:,Selected Name:,選択された名前：
+이력이 저장되었습니다.,History has been saved.,履歴が保存されました。
+이력보기,View History,履歴を見る
+전체보기,View All,すべて見る
+이력 목록,History List,履歴リスト
+번호,No.,番号
+날짜,Date,日付
+성별,Gender,性別
+타입,Type,タイプ
+글자수,Characters,文字数
+추천이름,Recommended Name,おすすめ名前
+전체이름,Full Name,フルネーム
+언어설정,Language Settings,言語設定
+전 단계로 돌아가기,Return to Previous Menu,前の段階に戻る
+한국어로 설정되었습니다.,Set to Korean.,韓国語に設定されました。
+영어로 설정되었습니다.,Set to English.,英語に設定されました。
+일본어로 설정되었습니다.,Set to Japanese.,日本語に設定されました。
+시스템을 종료합니다.,System is shutting down.,システムを終了します。
+안녕히 가십시오.,Goodbye.,さようなら。
+❌ 잘못된 입력입니다.,❌ Invalid input.,❌ 無効な入力です。
+다시 입력해주세요.,Please input again.,もう一度入力してください。
+계속하시려면 엔터를 입력해주세요.,Press Enter to continue.,続行するにはEnterを押してください。
+개발자 정보,Developer Information,開発者情報
+코드보기,View Code,コードを見る
+Github 사이트에서 코드를 확인할 수 있습니다.,You can check the code on Github.,Githubサイトでコードを確認できます。
+Github 사이트로 안내합니다^-^,Directing you to Github^-^,Githubサイトにご案内します^-^
+이전 메뉴로 돌아갑니다.,Return to Previous Menu.,前のメニューに戻ります。
+메인 메뉴로 돌아갑니다.,Return to Main Menu.,メインメニューに戻ります。
+만든이,Developer,開発者
+여자,female,女性
+남자,male,男
+이름 번호를 입력하세요.,Please enter your name number.,名前番号を入力してください。
+성,Surname,姓

@@ -17,7 +17,7 @@ import com.java.naming.view.NameGeneratorView;
 //이름 생성 로직
 public class NameGeneratorService {
 	
-	private final String HISTORY_PATH = "resource\\history.txt";
+	private final String HISTORY_PATH = "resources\\history.txt";
 	
 	private NameGeneratorView view = new NameGeneratorView();
 	private  NameDTO dto = new NameDTO();
@@ -81,6 +81,7 @@ public class NameGeneratorService {
 				
 				if(surname.matches("^[가-힣]+$")) {	//한글만 입력되는지 확인하는 정규식
 					dto.setSurName(surname);
+					request.setSurname(surname);
 					loop = false;
 				} else {
 					throw new Exception("성씨는 한글만 입력 가능합니다.");
@@ -220,6 +221,8 @@ public class NameGeneratorService {
             view.showSaveCompleted(history, fullName);
             
         } catch (Exception e) {
+        	System.out.println("이력 저장 중 구체적인 오류: " + e);
+            e.printStackTrace(); // 스택 트레이스 출력
             mainView.errorMessage("이력 저장 중 오류가 발생했습니다: " + e.getMessage());
         }
     }

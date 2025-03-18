@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 import com.github.lalyos.jfiglet.FigletFont;
+import com.java.naming.service.LanguageService;
 import com.java.naming.service.MainService;
 //메인 메뉴 및 공통 UI 요소
 public class MainView {
@@ -22,11 +23,16 @@ public class MainView {
 		result += "\r\n";
 		result += getTitle();
 		result += getSeperator();
-		result += getSubTitle("📜 환영합니다! 운수 좋은 작명소입니다.");
+		result += getSubTitle(LanguageService.get("📜 환영합니다! 운수 좋은 작명소입니다."));
 		result += getSeperatorThin();
-		result += getSubTitle("메뉴 선택");
+		result += getSubTitle(LanguageService.get("메뉴 선택"));
 		result += getSeperatorThin();
-		result += setNumRowMargin("작명하기", "이력보기", "설명보기", "환경설정", "종료하기");
+		result += setNumRowMargin(
+				LanguageService.get("작명하기"), 
+		        LanguageService.get("이력보기"), 
+		        LanguageService.get("설명보기"),
+		        LanguageService.get("환경설정"), 
+		        LanguageService.get("종료하기"));
 		result += getSeperatorThin();
 		result += input();
 		MainService.printLine(result, 300);
@@ -119,8 +125,8 @@ public class MainView {
 
 	    String result = "";
 	    result += getSeperator();
-	    result += getSubTitle("시스템을 종료합니다.");
-	    result += getSubTitle("안녕히 가십시오.");
+	    result += getSubTitle(LanguageService.get("시스템을 종료합니다."));
+	    result += getSubTitle(LanguageService.get("안녕히 가십시오."));
 	    result += getSeperator();
 	    result += addRowMarginMultiLine("\r\n"
 	    		+ " ██████╗  ██████╗  ██████╗ ██████╗ ██████╗ ██╗   ██╗███████╗   ██╗ \r\n"
@@ -158,41 +164,41 @@ public class MainView {
 	}
 	
 	public void pause() {
-		String result = "";
-		result += "\r\n";
-		result += getSeperator();
-		result += getSubTitle("계속하시려면 엔터를 입력해주세요.");
-		result += getSeperator();
-		System.out.println(result);
-		scan.nextLine();	//Block
-		System.out.println();
+	    String result = "";
+	    result += "\r\n";
+	    result += getSeperator();
+	    result += getSubTitle(LanguageService.get("계속하시려면 엔터를 입력해주세요."));
+	    result += getSeperator();
+	    System.out.println(result);
+	    scan.nextLine();    //Block
+	    System.out.println();
 	}
-	
+
 	public void errorInput() {
-		String result = "";
-		result += getSeperator();
-		result += getSubTitle("❌ 잘못된 입력입니다.");
-		result += getSubTitle("다시 입력해주세요.");
-		result += getSeperator();
-		System.out.println(result);
+	    String result = "";
+	    result += getSeperator();
+	    result += getSubTitle(LanguageService.get("❌ 잘못된 입력입니다."));
+	    result += getSubTitle(LanguageService.get("다시 입력해주세요."));
+	    result += getSeperator();
+	    System.out.println(result);
 	}
-	
+
 	public String errorMessage(String title) {
-		String result = "";
-		result = setRowMargin(title);
-		return result;
+	    String result = "";
+	    result = setRowMargin(LanguageService.get(title));
+	    return result;
 	}
-	
+
 	public String input() {
-		return "입력 > ";
+	    return LanguageService.get("입력") + " > ";
 	}
-	
+
 	public String returnMenu() {
-		return "이전 메뉴로 돌아갑니다.";
+	    return LanguageService.get("이전 메뉴로 돌아갑니다.");
 	}
-	
+
 	public String returnMainMenu() {
-		return "메인 메뉴로 돌아갑니다.";
+	    return LanguageService.get("메인 메뉴로 돌아갑니다.");
 	}
 	
 	public String getSeperator() {

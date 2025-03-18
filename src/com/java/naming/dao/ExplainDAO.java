@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 
 import com.java.naming.Main;
+import com.java.naming.service.LanguageService;
 import com.java.naming.view.MainView;
 
 public class ExplainDAO {
@@ -21,7 +22,8 @@ public class ExplainDAO {
 		String path = "";
 		
 		result += mainView.getSeperator();
-		result += mainView.setRowMargin("설명");	//설명을 가운데 정렬해 출력해주는 메서드
+		result += mainView.setRowMargin(LanguageService.get("설명"));	//설명을 가운데 정렬해 출력해주는 메서드
+		result += mainView.getSeperatorThin();
 		
 		if(langIndex == 1) {
 			path = "resources/explain_en.txt";
@@ -39,9 +41,7 @@ public class ExplainDAO {
 				try {
 					String[] temp = line.split("\\.");
 					Integer.parseInt(temp[0]);
-					result += mainView.getSeperator();
 					result += line + "\r\n";
-					result += mainView.getSeperator();
 				} catch (Exception e) {
 					result += line + "\r\n";
 				}

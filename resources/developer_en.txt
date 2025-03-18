@@ -1,0 +1,11 @@
+[Project]
+Project name: naming-center
+Development period: March 16, 2025 ~ March 18, 2025 (3 days)
+Development code: https://github.com/Emily0814/ajaaja-portfolio
+[About]
+Developer name: Lee Hye-mi
+Email: ajaajashwaiting@gmail.com
+Portfolio: https://ajaaja-portfolio.netlify.app
+Self-introduction: I am a developer who values ​​continuous self-development.
+I strive to build trust with the team and project through responsible work performance and to produce better results.
+In addition, I am doing my best to become a developer who respects and learns from each other's experiences and expertise through collaboration with team members and grows together.
